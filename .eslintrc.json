@@ -1,0 +1,95 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "import"],
+  "rules": {
+    "@typescript-eslint/no-empty-function": "warn",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react/react-in-jsx-scope": "off",
+    "no-empty": "warn",
+    "dot-notation": "off",
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off",
+    "semi": "off",
+    "quotes": [
+      "warn",
+      "double",
+      { "avoidEscape": true, "allowTemplateLiterals": true }
+    ],
+    "curly": 0,
+    "nonblock-statement-body-position": ["error", "any"],
+    "linebreak-style": 0,
+    "no-trailing-spaces": ["error", { "skipBlankLines": true }],
+    "comma-dangle": ["error", "only-multiline"],
+    "operator-linebreak": 0,
+    "prefer-const": 0,
+    "no-console": ["warn", { "allow": ["error"] }],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "max-len": 0,
+    "indent": 0,
+    "no-unsafe-optional-chaining": 0,
+    "object-curly-newline": ["error", { "consistent": true }],
+    "camelcase": "warn",
+    "import/order": "off",
+    "no-restricted-syntax": 0,
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": false,
+        "html": false
+      }
+    ],
+    "no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": false
+      }
+    ],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "react/no-array-index-key": "off",
+    "react/prop-types": [
+      "error",
+      {
+        "skipUndeclared": true
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": ["^@/", "^./"]
+      }
+    ],
+    "import/extensions": [
+      "error",
+      {
+        "ignorePackages": true,
+        "pattern": {
+          "ts": "never",
+          "tsx": "never"
+        }
+      }
+    ]
+  }
+}
